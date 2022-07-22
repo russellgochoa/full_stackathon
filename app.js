@@ -14,6 +14,8 @@ app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use('/api', routes)
+app.use(express.static(`${__dirname}/client/build`))
+
 // CONTROLLERS
 //db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -41,6 +43,10 @@ app.get('/park/:id', async (req, res) => {
   res.json(parks)
 })
 
+app.get('/*', (req, res) => {
+  res.sendFile(`${__dirname}/client/build/index.html`)
+ })
+ 
 // app.get('/', (req, res) => {
 //   res.send('server base')
 // })
