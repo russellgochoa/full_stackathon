@@ -13,14 +13,10 @@ app.use(cors())
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-<<<<<<< HEAD
 app.use('/api', routes)
+
 // CONTROLLERS
 //db.on('error', console.error.bind(console, 'MongoDB connection error:'))
-=======
-
-//BRANDS POST REQUEST
->>>>>>> main
 
 app.get('/', (req, res) => {
   res.send({ msg: 'Server Running' })
