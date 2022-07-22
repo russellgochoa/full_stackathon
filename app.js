@@ -15,6 +15,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use('/api', routes)
 // CONTROLLERS
+//db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 //BRANDS POST REQUEST
 
