@@ -1,5 +1,6 @@
 import { Card, Icon } from "semantic-ui-react";
 import { useState } from "react";
+import axios from "axios";
 
 export default function RollerCoasterCard(props) {
   const [press, setPress] = useState(false);
