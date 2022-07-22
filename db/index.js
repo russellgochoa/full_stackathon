@@ -2,14 +2,14 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 
 mongoose
-  .connect('mongodb://127.0.0.1:27017/coasterDatabase')
+  .connect(process.env.MONGO_CONNECTION_STRING)
   .then(() => {
     console.log('Successfully connected to MongoDB.')
   })
   .catch((e) => {
     console.error('Connection error', e.message)
   })
-mongoose.set('debug, true')
+//mongoose.set('debug, true')
 const db = mongoose.connection
 
 module.exports = db

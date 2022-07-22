@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "## Group 1 - Russell Ochoa",
   "main": "index.js",
+  "proxy": "http://localhost:3001",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "build": "cd client && rm -rf build && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -29,3 +32,4 @@
   },
   "keywords": []
 }
+
