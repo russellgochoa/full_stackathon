@@ -17,6 +17,7 @@ app.use('/api', routes)
 app.use(express.static(`${__dirname}/client/build`))
 
 // CONTROLLERS
+//db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 //BRANDS POST REQUEST
 
