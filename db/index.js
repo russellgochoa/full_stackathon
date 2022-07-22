@@ -1,10 +1,8 @@
 const mongoose = require('mongoose')
-require('./.env').config()
+require('dotenv').config()
 
 mongoose
-  .connect(
-    `mongodb+srv://mahamakhan:${MY_PASS}@cluster0.tnubs.mongodb.net/?retryWrites=true&w=majority`
-  )
+  .connect(process.env.MONGO_CONNECTION_STRING)
   .then(() => {
     console.log('Successfully connected to MongoDB.')
   })
