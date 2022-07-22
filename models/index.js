@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
-const coasterSchema = require('./coaster')
-const parkSchema = require('./Park')
+const CoasterSchema = require('./coaster')
+const ParkSchema = require('./park')
 
-const Product = mongoose.model('Coaster', coasterSchema)
-const Brand = mongoose.model('Park', parkSchema)
+const Coaster = mongoose.model('Coaster', CoasterSchema)
+const Park = mongoose.model('Park', ParkSchema)
 
 module.exports = {
   Coaster,
